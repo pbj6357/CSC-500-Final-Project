@@ -133,3 +133,11 @@ current = 0
 while current < steps:
     MoveBug(ladybug)
     current = current + 1
+
+BX = 250
+BY = 250
+CX = round(ladybug.xcor())
+CY = round(ladybug.ycor())
+distance = math.sqrt(((CX-BX)**2)+((CY-BY)**2)) / steps
+print("n/The ladybug's current location is:",str(round(ladybug.xcor()))+',',str(round(ladybug.ycor())))
+print("n/The distance from the ladybug's start location to the current location is: ",str(format(distance,'.3f')))
